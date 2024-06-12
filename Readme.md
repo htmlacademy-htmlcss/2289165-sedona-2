@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Екатерина Семенец](https://up.htmlacademy.ru/htmlcss-individual/2/user/2289165).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
+* Сайт: [Мой проект](https://pixi211.github.io/2289165-sedona-2/).
 
 ---
 
