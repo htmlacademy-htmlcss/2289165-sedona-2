@@ -14,18 +14,24 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+  background-color: #F2F2F2;
+}
+
 body {
+  margin: 0 auto;
+  min-height: 100%;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-  background-color: #F2F2F2;
-  color: #000000;
-}
-
-.page-content {
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 #00000033;
+  color: #000000;
 }
 
 /* buttons */
@@ -96,6 +102,11 @@ body {
 }
 
 /* main */
+
+.main-container {
+  flex-grow: 1;
+}
+
 .hero {
   background-image: url("../images/divider.svg"), url("../images/mountains.jpg");
   background-size: 100% auto, cover;
