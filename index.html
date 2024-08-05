@@ -13,31 +13,31 @@
         <img src="images/logo/logo-sedona.svg" width="140" height="70" alt="Логотип города Седона">
       </a>
       <nav class="site-navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item active">
-            <a class="navigation-link" href="index.html">Главная</a>
+        <ul class="site-navigation-list">
+          <li class="site-navigation-item active">
+            <a class="site-navigation-link" href="index.html">Главная</a>
           </li>
           <li class="site-navigation-item">
-            <a class="navigation-link" href="#">О Седоне</a>
+            <a class="site-navigation-link" href="#">О Седоне</a>
           </li>
           <li class="site-navigation-item">
-            <a class="navigation-link" href="catalog.html">Гостиницы</a>
+            <a class="site-navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
 
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+        <ul class="site-navigation-list site-navigation-user">
+          <li class="site-navigation-item search">
+            <a class="site-navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="site-navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="site-navigation-item favourites">
+            <a class="site-navigation-link" href="#">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
-          <li class="site-navigation-item">
-            <a class="navigation-link button button-brown" href="catalog.html">
+          <li class="site-navigation-item catalog-button">
+            <a class="site-navigation-link button button-brown" href="catalog.html">
               Хочу сюда!
               <span class="visually-hidden">Поиск отелей</span>
             </a>
@@ -57,7 +57,7 @@
       <section class="advantages">
         <h2 class="visually-hidden">Преимущества</h2>
 
-        <div class="text-container">
+        <div class="text-container advantages-sedona">
           <p class="big-text">
             Седона — небольшой городок в Аризоне, заслуживающий большего!
           </p>
@@ -69,7 +69,7 @@
         <ul class="advantages-list">
           <li class="advantages-item advantages-emphasis">
             <div class="advantages-image">
-              <img src="images/town.jpg" width="800" height="385" alt="Улица Седоны">
+              <img class="image-town" src="images/town.jpg" width="800" height="385" alt="Улица Седоны">
             </div>
             <div class="advantages-text">
               <h3 class="advantages-title">Настоящий городок</h3>
@@ -96,7 +96,7 @@
           </li>
           <li class="advantages-item advantages-emphasis">
             <div class="advantages-image">
-              <img src="images/devil-bridge.jpg" width="800" height="385" alt="Мост дьявола">
+              <img class="image-devil-bridge" src="images/devil-bridge.jpg" width="800" height="385" alt="Мост дьявола">
             </div>
             <div class="advantages-text">
               <h3 class="advantages-title">Там есть мост дьявола</h3>
@@ -109,7 +109,7 @@
       <section class="reasons">
         <h2 class="visually-hidden">Причины приехать в Седону</h2>
 
-        <div class="text-container">
+        <div class="text-container reasons-sedona">
           <p class="big-text">
             Приезжайте в Седону отдохнуть в комфорте и уюте!
           </p>
@@ -120,16 +120,22 @@
 
         <ul class="reasons-list">
           <li class="reasons-item">
-            <h3 class="reasons-title">Жильё</h3>
-            <p class="reasons-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <div class="reasons-content">
+              <h3 class="reasons-title">Жильё</h3>
+              <p class="reasons-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </div>
           </li>
           <li class="reasons-item">
-            <h3 class="reasons-title">Еда</h3>
-            <p class="reasons-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            <div class="reasons-content">
+              <h3 class="reasons-title">Еда</h3>
+              <p class="reasons-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+            </div>
           </li>
           <li class="reasons-item">
-            <h3 class="reasons-title">Сувениры</h3>
-            <p class="reasons-description">Не только китайского, но и настоящего местного производства!</p>
+            <div class="reasons-content">
+              <h3 class="reasons-title">Сувениры</h3>
+              <p class="reasons-description">Не только китайского, но и настоящего местного производства!</p>
+            </div>
           </li>
         </ul>
       </section>
@@ -137,12 +143,14 @@
       <section class="hotel-assortment">
         <h2 class="visually-hidden">Отправиться в Седону</h2>
 
-        <div class="text-container">
+        <div class="text-container hotels-sedona">
           <p class="big-text">
             Заинтересовались?
           </p>
           <p class="small-text">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+            Укажите предполагаемые даты поездки,
+            </br>
+            и мы покажем вам лучшие предложения гостиниц в Седоне
           </p>
         </div>
 
