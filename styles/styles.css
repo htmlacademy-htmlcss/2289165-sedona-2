@@ -40,7 +40,6 @@ body {
   height: 100%;
   background-color: #F2F2F2;
   margin: 0;
-  min-width: 1280px;
 }
 
 .page-container {
@@ -186,7 +185,6 @@ body {
   margin: 0 auto;
   margin-bottom: -10px;
   min-height: 64px;
-  width: 1200px;
   padding: 0 70px;
 }
 
@@ -804,11 +802,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 140px);
   grid-template-rows: 1fr repeat(3, auto);
-  grid-template-areas:
-    "card-link card-link"
-    "type price"
-    "btn-more btn-favourite"
-    "stars rate";
   gap: 16px 20px;
 }
 
@@ -822,8 +815,7 @@ body {
   color: #000000;
   font-size: 24px;
   line-height: 28px;
-  grid-area: card-link;
-
+  grid-column: 1/-1;
 }
 
 .hotel-card-title {
@@ -836,8 +828,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   width: 140px;
-
-  grid-area: type;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
 .hotel-card-price {
@@ -846,22 +838,22 @@ body {
   font-weight: 400;
   width: 140px;
   text-align: right;
-
-  grid-area: price;
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 .hotel-card-button {
   width: 140px;
   padding: 8px 26px;
-
-  grid-area: btn-more;
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
 
 .hotel-card-button-favourite {
   width: 140px;
   padding: 8px 20px;
-
-  grid-area: btn-favourite;
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 
 .hotel-card-button-favourite.button-green {
@@ -871,8 +863,8 @@ body {
 .stars-count {
   width: 140px;
   margin: 0;
-  grid-area: stars;
-
+  grid-column: 1/2;
+  grid-row: 4/5;
 }
 
 .stars-count.stars-1 {
@@ -921,7 +913,8 @@ body {
   margin: 0;
   padding: 9px 22px 8px 23px;
   align-content: center;
-  grid-area: rate;
+  grid-column: 2/3;
+  grid-row: 4/5;
 }
 
 .pagination {
@@ -1018,8 +1011,6 @@ body {
   bottom: 0;
   margin: auto;
 }
-
-
 
 .social-svg:hover path,
 .social-svg:focus path {
