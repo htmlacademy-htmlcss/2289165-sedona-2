@@ -740,6 +740,7 @@ body {
   outline: 2px solid #E5E5E5;
   outline-offset: -2px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .mode-item:not(:last-child) {
@@ -751,7 +752,7 @@ body {
   outline-color: #000000;
 }
 
-.mode-item:focus {
+.mode-item:focus-within {
   outline-color: #68A2CA;
 }
 
@@ -932,6 +933,55 @@ body {
   min-height: 60px;
   text-align: center;
   align-content: center;
+
+  color: #ffffff;
+  background-color: #82B3D3;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.pagination-link {
+  display: block;
+  min-height: inherit;
+  padding: 5px;
+  align-content: center;
+
+}
+
+.pagination-item:not(.pagination-current):not(.pagination-item-dots):hover {
+  background-color: #68A2CA;
+
+}
+
+.pagination-item:focus-within {
+  background-color: #68A2CA;
+
+}
+
+.pagination-item:not(.pagination-current):not(.pagination-item-dots):active {
+  color: #FFFFFF4D;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
+  color: #000000;
+}
+
+.pagination-item-dots {
+  background-color: inherit;
+  color: #000000;
+}
+
+
+/* старый вариант - стили на ссылке(нет фокуса)
+.pagination-item {
+  min-width: 60px;
+  min-height: 60px;
+  text-align: center;
+  align-content: center;
 }
 
 .pagination-link {
@@ -952,6 +1002,7 @@ body {
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: #68A2CA;
+
 }
 
 .pagination-link:active {
@@ -960,15 +1011,13 @@ body {
 
 .pagination-current .pagination-link {
   background-color: #F2F2F2;
-}
-
-.pagination-current .pagination-link {
   color: #000000;
 }
 
 .pagination-item-dots {
   background-color: inherit;
 }
+*/
 
 /* main-footer */
 
