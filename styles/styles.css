@@ -933,55 +933,6 @@ body {
   min-height: 60px;
   text-align: center;
   align-content: center;
-
-  color: #ffffff;
-  background-color: #82B3D3;
-  border-radius: 4px;
-  font-size: 20px;
-  line-height: 36px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.pagination-link {
-  display: block;
-  min-height: inherit;
-  padding: 5px;
-  align-content: center;
-
-}
-
-.pagination-item:not(.pagination-current):not(.pagination-item-dots):hover {
-  background-color: #68A2CA;
-
-}
-
-.pagination-item:focus-within {
-  background-color: #68A2CA;
-
-}
-
-.pagination-item:not(.pagination-current):not(.pagination-item-dots):active {
-  color: #FFFFFF4D;
-}
-
-.pagination-current {
-  background-color: #F2F2F2;
-  color: #000000;
-}
-
-.pagination-item-dots {
-  background-color: inherit;
-  color: #000000;
-}
-
-
-/* старый вариант - стили на ссылке(нет фокуса)
-.pagination-item {
-  min-width: 60px;
-  min-height: 60px;
-  text-align: center;
-  align-content: center;
 }
 
 .pagination-link {
@@ -997,12 +948,12 @@ body {
   align-content: center;
   padding: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .pagination-link:hover,
 .pagination-link:focus {
   background-color: #68A2CA;
-
 }
 
 .pagination-link:active {
@@ -1017,7 +968,6 @@ body {
 .pagination-item-dots {
   background-color: inherit;
 }
-*/
 
 /* main-footer */
 
