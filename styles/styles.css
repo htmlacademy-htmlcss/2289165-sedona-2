@@ -790,9 +790,9 @@ body {
   z-index: 1;
 }
 
-.field:not(:empty) {
-  background-color: #F2F2F2;
-}
+.field:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #F2F2F2 inset;
+};
 
 .range-scale {
   position: relative;
