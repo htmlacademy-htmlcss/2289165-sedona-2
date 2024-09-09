@@ -1236,7 +1236,6 @@ body {
   color: #000000;
 }
 
-
 .modal-close-button {
   position: absolute;
   padding: 0;
@@ -1249,23 +1248,9 @@ body {
   cursor: pointer;
 }
 
-.modal-close-button::before,
-.modal-close-button::after {
-  content: "";
-  background-color: #000000;
-  width: 20px;
-  height: 2px;
-  position: absolute;
-  left: 50%;
-  display: block;
-}
-
-.modal-close-button::before {
-  transform: translateX(-50%) rotate(45deg);
-}
-
-.modal-close-button::after {
-  transform: translateX(-50%) rotate(135deg);
+.modal-cross {
+  position: relative;
+  top: 2px;
 }
 
 .modal-close-button:hover,
@@ -1278,8 +1263,8 @@ body {
   outline: 3px solid #83B3D3;
 }
 
-.modal-close-button:active::before,
-.modal-close-button:active::after {
+.modal-close-button:active .modal-cross,
+.modal-close-button:active .modal-cross {
   opacity: 0.3;
 }
 
@@ -1435,58 +1420,36 @@ body {
 
 .plus {
   position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
   top: 50%;
   transform: translateY(-50%);
   right: 5%;
-  opacity: 0.3;
-}
-
-.plus::before,
-.plus::after {
-  content: "";
-  display: block;
-  height: 2px;
-  width: 14px;
-  background-color: #756157;
-}
-
-.plus::before {
-  transform: translate(3px, 9px);
-}
-
-.plus::after {
-  transform: rotate(90deg) translate(7px, -3px);
+  fill: #7561574D;
 }
 
 .minus:hover::before,
-.minus:focus::before,
-.plus:hover::before,
-.plus:hover::after,
-.plus:focus::before,
-.plus:focus::after {
+.minus:focus::before {
   background-color: #000000;
 }
 
-.minus:focus,
-.plus:focus {
+.plus:hover:not(:active),
+.plus:focus:not(:active) {
+  fill: #000000;
+}
+
+.minus:focus {
   outline: 3px solid #82B3D3;
   border-radius: 4px;
 }
 
-.plus:hover,
 .plus:focus {
-  opacity: 1;
+  outline: 3px solid #82B3D3;
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
-.minus:active::before,
-.plus:active::before,
-.plus:active::after {
+.minus:active::before {
   opacity: 0.2;
 }
-
 
 .hotel-assortment-form-button {
   width: 577px;
