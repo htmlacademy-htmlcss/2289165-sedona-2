@@ -790,6 +790,10 @@ body {
   z-index: 1;
 }
 
+.field:not(:empty) {
+  background-color: #F2F2F2;
+}
+
 .range-scale {
   position: relative;
   margin-top: 46px;
@@ -1332,42 +1336,7 @@ body {
   cursor: pointer;
 }
 
-.check-in-date::-webkit-calendar-picker-indicator,
-.check-out-date::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-.check-in-date::before,
-.check-out-date::before {
-  content: attr(placeholder);
-  color: #000000;
-  opacity: 0.6;
-  text-align: left;
-  margin-right: 10px;
-}
-
-.check-in-date:focus::before,
-.check-out-date:focus::before {
-  content: none;
-}
-
-
-.check-in-date:required::-webkit-datetime-edit,
-.check-out-date:required::-webkit-datetime-edit {
-  position: absolute;
-  color: transparent;
-}
-
-.check-in-date:focus::-webkit-datetime-edit,
-.check-out-date:focus::-webkit-datetime-edit {
-  position: static;
-  color: #000000;
-}
-
-.check-in-date::after,
-.check-out-date::after {
+.field-group:not(.small-field-group):after{
   content: "";
   background-image: url("../images/icons/calendar.svg");
   position: absolute;
@@ -1375,8 +1344,9 @@ body {
   height: 15px;
   top: 50%;
   transform: translateY(-50%);
-  right: 5%;
+  right: 20px;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 .adult-number,
