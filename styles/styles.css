@@ -19,12 +19,12 @@
 *::after {
   box-sizing: border-box;
 }
-
+/*
 img {
   max-width: 100%;
   height: auto;
   object-fit: contain;
-}
+} */
 
 html {
   height: 100%;
@@ -475,7 +475,7 @@ input:focus:invalid:not(:placeholder-shown) {
   height: 2px;
   border-bottom: 2px solid #0000004d;
   position: absolute;
-  top: 86px;
+  bottom: -30px;
   left: 56px;
 }
 
@@ -499,7 +499,18 @@ input:focus:invalid:not(:placeholder-shown) {
   background-color: #82b3d3;
   width: 100%;
   padding: 0;
+}
 
+.advantages-emphasis .advantages-title{
+  margin-top: 102px;
+}
+
+.advantages-emphasis .advantages-description{
+  padding-bottom: 102px;
+}
+
+.advantages-image {
+  width: 800px;
 }
 
 .advantages-emphasis:first-child .advantages-image {
@@ -508,6 +519,12 @@ input:focus:invalid:not(:placeholder-shown) {
 
 .advantages-emphasis .advantages-title {
   color: #ffffff;
+}
+
+.advantages-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .image-town {
@@ -541,7 +558,7 @@ input:focus:invalid:not(:placeholder-shown) {
   color: #ffffff;
   background-color: #756157;
   background-image: url("../images/newsletter-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -621,8 +638,9 @@ input:focus:invalid:not(:placeholder-shown) {
   display: block;
   width: 8px;
   height: 11px;
-  left: 23px;
+  left: 100%;
   top: 5px;
+  transform: translateX(10px);
 }
 
 .breadcrumbs-item:last-child::after {
@@ -1007,6 +1025,7 @@ input:focus:invalid:not(:placeholder-shown) {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: start;
 }
 
 .hotel-card {
@@ -1053,6 +1072,11 @@ input:focus:invalid:not(:placeholder-shown) {
   font-weight: 400;
   width: 140px;
   text-align: right;
+}
+
+.type-of-housing,
+.hotel-card-price {
+  word-break: break-all;
 }
 
 .hotel-card-button {
@@ -1392,6 +1416,7 @@ input:focus:invalid:not(:placeholder-shown) {
   width: 440px;
   border-radius: 4px;
   padding: 12px 20px;
+  padding-right: 50px;
   cursor: pointer;
 }
 
