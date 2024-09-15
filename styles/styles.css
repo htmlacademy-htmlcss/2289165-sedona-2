@@ -20,12 +20,6 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 html {
   height: 100%;
 }
@@ -475,7 +469,7 @@ input:focus:invalid:not(:placeholder-shown) {
   height: 2px;
   border-bottom: 2px solid #0000004d;
   position: absolute;
-  top: 86px;
+  bottom: -30px;
   left: 56px;
 }
 
@@ -499,15 +493,29 @@ input:focus:invalid:not(:placeholder-shown) {
   background-color: #82b3d3;
   width: 100%;
   padding: 0;
+}
 
+.advantages-emphasis .advantages-title {
+  margin-top: 102px;
+  color: #ffffff;
+}
+
+.advantages-emphasis .advantages-description {
+  padding-bottom: 102px;
+}
+
+.advantages-image {
+  width: 800px;
 }
 
 .advantages-emphasis:first-child .advantages-image {
   order: 1;
 }
 
-.advantages-emphasis .advantages-title {
-  color: #ffffff;
+.advantages-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .image-town {
@@ -541,7 +549,7 @@ input:focus:invalid:not(:placeholder-shown) {
   color: #ffffff;
   background-color: #756157;
   background-image: url("../images/newsletter-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -621,8 +629,9 @@ input:focus:invalid:not(:placeholder-shown) {
   display: block;
   width: 8px;
   height: 11px;
-  left: 23px;
+  left: 100%;
   top: 5px;
+  transform: translateX(10px);
 }
 
 .breadcrumbs-item:last-child::after {
@@ -974,7 +983,8 @@ input:focus:invalid:not(:placeholder-shown) {
 }
 
 .mode-item:hover,
-.mode-item:active {
+.mode-item:active,
+.mode-item.active {
   outline-color: #000000;
 }
 
@@ -1006,6 +1016,7 @@ input:focus:invalid:not(:placeholder-shown) {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  align-items: start;
 }
 
 .hotel-card {
@@ -1052,6 +1063,11 @@ input:focus:invalid:not(:placeholder-shown) {
   font-weight: 400;
   width: 140px;
   text-align: right;
+}
+
+.type-of-housing,
+.hotel-card-price {
+  word-break: break-all;
 }
 
 .hotel-card-button {
@@ -1391,6 +1407,7 @@ input:focus:invalid:not(:placeholder-shown) {
   width: 440px;
   border-radius: 4px;
   padding: 12px 20px;
+  padding-right: 50px;
   cursor: pointer;
 }
 
@@ -1429,11 +1446,12 @@ input:focus:invalid:not(:placeholder-shown) {
 
 .minus {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 48px;
   top: 50%;
   transform: translateY(-50%);
-  left: 59%;
+  right: 31%;
+  cursor: pointer;
 }
 
 .minus::before {
@@ -1444,15 +1462,7 @@ input:focus:invalid:not(:placeholder-shown) {
   width: 14px;
   background-color: #7561574d;
   top: 50%;
-  left: 15%;
-}
-
-.plus {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 5%;
-  fill: #7561574d;
+  left: 41%;
 }
 
 .minus:hover::before,
@@ -1460,27 +1470,72 @@ input:focus:invalid:not(:placeholder-shown) {
   background-color: #000000;
 }
 
-.plus:hover,
-.plus:focus {
-  fill: #000000;
-}
-
-.plus:active {
-  fill: #7561574d;
-}
-
 .minus:focus {
-  outline: 3px solid #82b3d3;
-  border-radius: 4px;
+  outline: none;
 }
 
-.plus:focus {
+.minus:focus::after {
+  content: "";
   outline: 3px solid #82b3d3;
-  outline-offset: 3px;
   border-radius: 4px;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
 }
 
 .minus:active::before {
+  opacity: 0.2;
+}
+
+.plus {
+  position: absolute;
+  width: 35px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  cursor: pointer;
+}
+
+.plus::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 35%;
+  background-image: url("../images/icons/plus.svg");
+  opacity: 0.2;
+}
+
+.plus:hover::before,
+.plus:focus::before {
+  opacity: 1;
+}
+
+.plus:focus {
+  outline: none;
+}
+
+.plus:focus::after {
+  content: "";
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 26%;
+}
+
+.plus:active::before {
   opacity: 0.2;
 }
 
