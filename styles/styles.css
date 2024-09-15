@@ -19,12 +19,6 @@
 *::after {
   box-sizing: border-box;
 }
-/*
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-} */
 
 html {
   height: 100%;
@@ -501,11 +495,12 @@ input:focus:invalid:not(:placeholder-shown) {
   padding: 0;
 }
 
-.advantages-emphasis .advantages-title{
+.advantages-emphasis .advantages-title {
   margin-top: 102px;
+  color: #ffffff;
 }
 
-.advantages-emphasis .advantages-description{
+.advantages-emphasis .advantages-description {
   padding-bottom: 102px;
 }
 
@@ -515,10 +510,6 @@ input:focus:invalid:not(:placeholder-shown) {
 
 .advantages-emphasis:first-child .advantages-image {
   order: 1;
-}
-
-.advantages-emphasis .advantages-title {
-  color: #ffffff;
 }
 
 .advantages-image img {
@@ -1455,11 +1446,12 @@ input:focus:invalid:not(:placeholder-shown) {
 
 .minus {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 48px;
   top: 50%;
   transform: translateY(-50%);
-  left: 59%;
+  right: 31%;
+  cursor: pointer;
 }
 
 .minus::before {
@@ -1470,15 +1462,7 @@ input:focus:invalid:not(:placeholder-shown) {
   width: 14px;
   background-color: #7561574d;
   top: 50%;
-  left: 15%;
-}
-
-.plus {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 5%;
-  fill: #7561574d;
+  left: 41%;
 }
 
 .minus:hover::before,
@@ -1486,27 +1470,72 @@ input:focus:invalid:not(:placeholder-shown) {
   background-color: #000000;
 }
 
-.plus:hover,
-.plus:focus {
-  fill: #000000;
-}
-
-.plus:active {
-  fill: #7561574d;
-}
-
 .minus:focus {
-  outline: 3px solid #82b3d3;
-  border-radius: 4px;
+  outline: none;
 }
 
-.plus:focus {
+.minus:focus::after {
+  content: "";
   outline: 3px solid #82b3d3;
-  outline-offset: 3px;
   border-radius: 4px;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
 }
 
 .minus:active::before {
+  opacity: 0.2;
+}
+
+.plus {
+  position: absolute;
+  width: 35px;
+  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  cursor: pointer;
+}
+
+.plus::before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 35%;
+  background-image: url("../images/icons/plus.svg");
+  opacity: 0.2;
+}
+
+.plus:hover::before,
+.plus:focus::before {
+  opacity: 1;
+}
+
+.plus:focus {
+  outline: none;
+}
+
+.plus:focus::after {
+  content: "";
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 26%;
+}
+
+.plus:active::before {
   opacity: 0.2;
 }
 
