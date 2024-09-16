@@ -94,6 +94,7 @@ input:focus:invalid:not(:placeholder-shown) {
   text-decoration: none;
   border-radius: 4px;
   border-color: transparent;
+  border-width: 0;
   align-content: center;
   cursor: pointer;
   word-break: break-all;
@@ -356,11 +357,11 @@ input:focus:invalid:not(:placeholder-shown) {
 }
 
 .advantages-sedona .big-text {
-  margin: 69px 290px 25px;
+  margin: 69px 280px 25px;
 }
 
 .advantages-sedona .small-text {
-  margin: 0 274px 90px;
+  margin: 0 270px 90px;
 }
 
 .reasons-sedona .big-text {
@@ -437,8 +438,8 @@ input:focus:invalid:not(:placeholder-shown) {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  width: 230px;
-  margin: auto 85px;
+  width: 235px;
+  margin: auto 80px;
 }
 
 .advantages-title,
@@ -554,7 +555,7 @@ input:focus:invalid:not(:placeholder-shown) {
 }
 
 .newsletter-title {
-  margin: 0 140px 20px;
+  margin: 0 135px 20px;
 }
 
 .newsletter-description {
@@ -595,7 +596,7 @@ input:focus:invalid:not(:placeholder-shown) {
   flex-direction: column;
   justify-content: space-between;
   width: 1060px;
-  margin: 35px 70px 66px;
+  margin: 35px 70px 70px;
 }
 
 .catalog-header-title {
@@ -804,11 +805,15 @@ input:focus:invalid:not(:placeholder-shown) {
   border-radius: 4px 0 0 4px;
 }
 
-.range-input::-webkit-outer-spin-button,
-.range-input::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   appearance: none;
   margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance:textfield;
 }
 
 .range-input:disabled {
@@ -913,21 +918,26 @@ input:focus:invalid:not(:placeholder-shown) {
 }
 
 .hotels-found {
+  flex-shrink: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
   margin: auto 0;
   margin-right: 200px;
+  margin-top: 6px;
+  text-align: start;
 }
 
 .select-control {
+  flex-shrink: 0;
   font-family: inherit;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background-color: #ffffff;
   width: 292px;
+  height: 49px;
   margin-right: 70px;
 
   padding: 14px 50px 14px 20px;
@@ -964,11 +974,12 @@ input:focus:invalid:not(:placeholder-shown) {
   padding: 0;
   list-style-type: none;
   flex-wrap: wrap;
+  gap: 8px;
 }
 
 .mode-item {
-  min-width: 48px;
-  min-height: 48px;
+  width: 48px;
+  height: 48px;
   outline: 2px solid #e5e5e5;
   outline-offset: -2px;
   border-radius: 4px;
@@ -976,10 +987,6 @@ input:focus:invalid:not(:placeholder-shown) {
   background-image: url("../images/icons/cards-view.svg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.mode-item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .mode-item:hover,
@@ -1111,11 +1118,11 @@ input:focus:invalid:not(:placeholder-shown) {
 }
 
 .stars-4 {
-  width: 90px;
+  width: 88px;
 }
 
 .stars-5 {
-  width: 110px;
+  width: 95px;
 }
 
 .rate-count {
@@ -1188,7 +1195,7 @@ input:focus:invalid:not(:placeholder-shown) {
 
 .main-footer {
   display: flex;
-  align-items: top;
+  align-items: flex-end;
   padding: 45px 70px 35px;
 }
 
@@ -1244,7 +1251,8 @@ input:focus:invalid:not(:placeholder-shown) {
   color: #000000;
   width: 331px;
   margin: 0;
-  justify-self: center;
+  flex-grow: 1;
+  text-align: center;
 }
 
 .phone:hover,
