@@ -238,6 +238,7 @@ input:focus:invalid:not(:placeholder-shown) {
 .site-navigation-item.active {
   text-decoration: underline;
   -webkit-text-decoration-color: #756257;
+  -moz-text-decoration-color: #756257;
   text-decoration-color: #756257;
   text-decoration-thickness: 2px;
   text-underline-offset: 19px;
@@ -813,7 +814,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 input[type="number"] {
-  -moz-appearance:textfield;
+  -moz-appearance: textfield;
+  appearance: none;
 }
 
 .range-input:disabled {
